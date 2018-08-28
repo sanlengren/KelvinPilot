@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--命名空间是对应接口的包名+类名 -->
+<mapper namespace="com.kelvin.mapper.MediaMapper">
+    <!-- paramerType：java自定义类型或数据类型-->
+    <insert id="saveMedia" parameterType="Media">
+        insert into psg_wechat_media(TYPE, MEDIA_ID, CREATED_TIME, STATUS) VALUES(#{type}, #{media_id}, #{created_time}, #{status})
+    </insert>
+    <select id="queryAll" resultType="Media">
+          select * from psg_wechat_media
+    </select>
+</mapper>
