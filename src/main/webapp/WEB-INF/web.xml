@@ -25,6 +25,24 @@
        <param-value>/WEB-INF/root-context.xml</param-value>
    </context-param>
  
+     <!-- Kelvin : this is to configure the log4j property -->
+ <context-param>  
+    <param-name>log4jConfigLocation</param-name>  
+    <param-value>classpath:log4j_MVC.properties</param-value>  
+</context-param>     
+  
+<context-param>  
+    <param-name>log4jRefreshInterval</param-name>  
+      <param-value>3000</param-value>  
+ </context-param>  
+  
+<listener>  
+    <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>  
+ </listener>  
+ 
+ 
+ 
+ 
     
     <!-- Spring ContextLoaderListener -->
    <listener>

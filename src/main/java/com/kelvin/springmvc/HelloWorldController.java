@@ -2,6 +2,7 @@ package com.kelvin.springmvc;
  
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import com.kelvin.bean.Media;
 import com.kelvin.mapper.MediaMapper;
 import com.kelvin.service.MediaService;
 import com.kelvin.service.impl.MediaServiceImpl;
+
  
 @Controller
 public class HelloWorldController {
@@ -20,7 +22,9 @@ public class HelloWorldController {
     @RequestMapping("/hello")
     public String hello(Model model) {
     	
+    	Logger util = Logger.getLogger(this.getClass());
     	ApplicationContext ctx=new ClassPathXmlApplicationContext("spring-mybatis.xml");
+    	
     	MediaMapper mediaMapper = ctx.getBean(MediaMapper.class);
 
         List<Media> medialist = mediaMapper.queryAll();
