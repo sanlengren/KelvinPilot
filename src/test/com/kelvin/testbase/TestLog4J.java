@@ -34,6 +34,8 @@ public class TestLog4J {
     	util.warn("Kelvin : warning level log");
     	util.info(util.getClass() + " " + util.getName());
 
+    	//test git commit
+    	
 	}
 
 }
