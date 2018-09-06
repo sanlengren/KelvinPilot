@@ -35,6 +35,7 @@ public class TestLog4J {
     	util.info(util.getClass() + " " + util.getName());
 
     	//test git commit
+    	//test git commit 2
     	
 	}
 
