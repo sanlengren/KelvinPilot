@@ -37,6 +37,7 @@ public class TestLog4J {
     	//test git commit
     	//test git commit 2
     	//test git commit 3
+    	//test git commit 4
     	
 	}
 
