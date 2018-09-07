@@ -8,12 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
-
 import com.kelvin.bean.Media;
 import com.kelvin.mapper.MediaMapper;
-import com.kelvin.service.MediaService;
-import com.kelvin.service.impl.MediaServiceImpl;
 
  
 @Controller
