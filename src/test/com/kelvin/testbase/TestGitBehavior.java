@@ -7,6 +7,7 @@ public class TestGitBehavior {
 		//A 本地创建分支，提交了多次，但是没有push,想看本地记录。提交后，是否也能看到这些记录？
 		// first do add
 		// change and add again?
+		// try do add 3rd time, commit the 2nd time, pull, see what would be in the log
 		
 		
 		
