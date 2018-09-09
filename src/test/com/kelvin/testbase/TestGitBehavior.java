@@ -9,7 +9,10 @@ public class TestGitBehavior {
 		// change and add again?
 		// try do add 3rd time, commit the 2nd time, pull, see what would be in the log
 		
-		
+		//Case - 2
+		//A创建一个分支，B和A一起在这个分支上面干活？
+		//Team里面可以用switch 去做checkout
+		//然后我在这个branch commit
 		
 		
 	}
