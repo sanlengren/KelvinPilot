@@ -30,6 +30,7 @@ public class TestGitBehavior {
 		
 		// test after set rule on github, request approve/review
 		// first test not sucess, expect push fail
+		// maybe because I am admin and do push, escape from rule setting. rule apply to admin and try again
 	}
 	
 
