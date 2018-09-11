@@ -29,6 +29,7 @@ public class TestGitBehavior {
 		
 		
 		// test after set rule on github, request approve/review
+		// I want to test pull request and merge!
 	}
 	
 
