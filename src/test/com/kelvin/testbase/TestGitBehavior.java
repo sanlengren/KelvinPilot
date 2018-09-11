@@ -15,6 +15,10 @@ public class TestGitBehavior {
 		//然后我在这个branch commit
 		
 		//Case-3 
+		// test stash
+		
+//		Case 4
+		//制造一个冲突，我再test_stash分支录入了一句话
 		
 		
 	}
