@@ -34,6 +34,7 @@ public class TestGitBehavior {
 		// maybe because I am admin and do push, escape from rule setting. rule apply to admin and try again
 //I want to test pull request and merge!
 		// test reject and submit again
+		// before review, commit again?
 	}
 	
 
