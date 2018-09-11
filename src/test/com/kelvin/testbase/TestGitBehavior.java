@@ -14,6 +14,9 @@ public class TestGitBehavior {
 		//Team里面可以用switch 去做checkout
 		//然后我在这个branch commit
 		
+		//Case - 3
+		//I commit in master, then there will be conflict with commit in branch, merge to expose conflict
+		
 		
 	}
 	
