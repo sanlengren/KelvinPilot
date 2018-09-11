@@ -29,6 +29,7 @@ public class TestGitBehavior {
 		
 		
 		// test after set rule on github, request approve/review
+		// first test not sucess, expect push fail
 	}
 	
 
