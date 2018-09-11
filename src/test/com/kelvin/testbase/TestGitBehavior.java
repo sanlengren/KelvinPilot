@@ -27,6 +27,8 @@ public class TestGitBehavior {
 		
 		// reproduct the conflict, fix and commit!
 		
+		
+		// test after set rule on github, request approve/review
 	}
 	
 
