@@ -13,10 +13,19 @@ public class TestGitBehavior {
 		//A创建一个分支，B和A一起在这个分支上面干活？
 		//Team里面可以用switch 去做checkout
 		//然后我在这个branch commit
+		  
+//<<<<<<< HEAD
+//		//Case - 3
+//		//I commit in master, then there will be conflict with commit in branch, merge to expose conflict
+//=======
+//		//Case-3 
+//		// test stash
+//		
+////		Case 4
+//		//制造一个冲突，我再test_stash分支录入了一句话
+//>>>>>>> test_stash
 		
-		//Case - 3
-		//I commit in master, then there will be conflict with commit in branch, merge to expose conflict
-		
+		// reproduct the conflict, fix and commit!
 		
 	}
 	
