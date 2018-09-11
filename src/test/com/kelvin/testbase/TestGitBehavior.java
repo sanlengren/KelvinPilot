@@ -14,6 +14,8 @@ public class TestGitBehavior {
 		//Team里面可以用switch 去做checkout
 		//然后我在这个branch commit
 		
+		//Case-3 
+		
 		
 	}
 	
