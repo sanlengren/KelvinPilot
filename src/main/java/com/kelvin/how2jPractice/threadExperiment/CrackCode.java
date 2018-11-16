@@ -2,7 +2,10 @@ package com.kelvin.how2jPractice.threadExperiment;
 
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+
+import com.kelvin.util.StringTools;
 
 public class CrackCode {
 //	1. 生成一个长度是3的随机字符串，把这个字符串当作 密码
@@ -15,20 +18,8 @@ public class CrackCode {
 
 	private static String code = null;
 	
-	public static String getRandomString(int length){
-	     String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-	     Random random=new Random();
-	     StringBuffer sb=new StringBuffer();
-	     for(int i=0;i<length;i++){
-	       int number=random.nextInt(62);
-	       sb.append(str.charAt(number));
-	     }
-	     System.out.println("抽中的是"+ sb);
-	     return sb.toString();
-	 }
-	
 	public static void main(String[] args){
-		code = getRandomString(2);
+		code = StringTools.getRandomString(2);
 		CrackCodeThread test = new CrackCodeThread(code);
 		DaemonLogThreadForCrack Daemon = new DaemonLogThreadForCrack(test.getresult());
 		
@@ -39,18 +30,27 @@ public class CrackCode {
 		//注意，设置了线程优先级不能保证永远被优先进行，实际执行是操作系统处理，并且可以overwrite.理解为提升概率会更合适！
 		Daemon.start();
 		test.start();
-		
-//		ArrayList<String> test = new ArrayList<String>();
-//		 System.out.println(test.size());
-//		 test.add("a");
-//		 System.out.println(test.size());
-//		 test.add("b");
-//		 System.out.println(test.size());
-//		 test.remove(0);
-//		 System.out.println(test.size());
-//		 System.out.println(test.get(test.size()-1));
-//		 System.out.println(test.get(test.size()));
-//		
 	}
 	
+	public class ThreadSafetyArrayListDemo {
+		private List<String> loop = new ArrayList<String>();
+		
+		public void add(String target){
+			synchronized (this){
+				loop.add(target);			
+			}
+		}
+		
+		public void remove(int position){
+			synchronized (this){
+				loop.remove(position);			
+			}
+		}
+		
+		public int size(){
+			synchronized (this){
+			return loop.size();
+			}
+		}
+	}
 }

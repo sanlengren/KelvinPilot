@@ -2,7 +2,7 @@ package com.kelvin.how2jPractice;
 
 public class APHero extends Hero implements AP{
 
-	public APHero(String name, float hp, int damage) {
+	public APHero(String name, int hp, int damage) {
 		super(name, hp, damage);
 	}
 

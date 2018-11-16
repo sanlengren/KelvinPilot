@@ -39,12 +39,6 @@ public class DaemonLogThreadForCrack extends Thread{
 					System.out.println("¡¾Daemon¡¿ : printe last in buffer " + _printRecord.get(_printRecord.size()-1) );
 				}else{
 					System.out.println("¡¾Daemon¡¿ : Tried this string to crack code===> " + _printRecord.remove(0));
-//					System.out.println("¡¾Daemon¡¿ : printe last in buffer " + _printRecord.get(_printRecord.size()-1) 
-//					+ "and the size is " + _printRecord.size()
-//					+ "The [0] is " + _printRecord.get(0)
-//					+ "The [1] is " + _printRecord.get(1)
-//					+ "The [2] is " + ((null == _printRecord.get(2))? "null" : _printRecord.get(2))
-//							) ;
 				}
 				
 //				if (_printRecord.size()>1){

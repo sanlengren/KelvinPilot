@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import com.kelvin.util.StringTools;
+
 public class CrackCodeThread extends Thread{
     private static String target = null;
     private String candidate = null;
@@ -25,10 +27,9 @@ public class CrackCodeThread extends Thread{
 			if (candidate != null){
 				loop.add(candidate);
 				System.out.println("【Crack】 :Printe add candidate in buckets! :" + candidate);
-//				System.out.println((loop.size()>=2?("【Crack】 :find out the previous one!" + loop.get(loop.size()-2)):"give up"));
 			}
 			
-			candidate = getRandomString(2);	
+			candidate = StringTools.getRandomString(2);	
 			System.out.println("【Crack】 :already valiate candidate :" + candidate);
 			
 		}
@@ -38,6 +39,7 @@ public class CrackCodeThread extends Thread{
 		
 		while (loop.size()>1){
 			Thread.yield();
+			System.out.println("【Crack】 :Yield to wait for Daemon print out all record");
 			//为了让守护线程可以打印完所有的内容
 		}
 	}
@@ -46,14 +48,4 @@ public class CrackCodeThread extends Thread{
 	public List<String> getresult(){
 		return loop;
 	}
-	public static String getRandomString(int length){
-	     String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-	     Random random=new Random();
-	     StringBuffer sb=new StringBuffer();
-	     for(int i=0;i<length;i++){
-	       int number=random.nextInt(62);
-	       sb.append(str.charAt(number));
-	     }
-	     return sb.toString();
-	 }
 }
