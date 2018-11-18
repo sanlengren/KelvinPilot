@@ -11,7 +11,7 @@ public class StringTools {
 	       int number=random.nextInt(62);
 	       sb.append(str.charAt(number));
 	     }
-	     System.out.println("抽中的是"+ sb);
+//	     System.out.println("抽中的是"+ sb);
 	     return sb.toString();
 	 }
 }
