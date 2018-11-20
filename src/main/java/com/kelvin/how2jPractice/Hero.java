@@ -26,6 +26,12 @@ public class Hero implements Comparable<Hero> {
         this.hp=hp;
     }
     
+    static {
+        //for reflection test
+    	System.out.println("静态方法初始化 Hero!");
+    }
+    
+    
     @Override
     public int compareTo(Hero anotherHero) {
         if(damage<anotherHero.damage)

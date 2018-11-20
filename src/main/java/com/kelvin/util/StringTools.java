@@ -14,4 +14,10 @@ public class StringTools {
 //	     System.out.println("抽中的是"+ sb);
 	     return sb.toString();
 	 }
+	
+	public static String _PilotProjectFolder = "D:/项目workshop/EclipseWorkspace/新建文件夹/PilotProjectFolder/";
+	public static String _PilotProjectFolderTempFile = _PilotProjectFolder + "新建文本文档 - 副本.txt";
+	public static String _PilotProjectFolderChineseFile = _PilotProjectFolder + "ANSI中文文档.txt";
+	public static String _PilotProjectFolderUTFChineseFile = _PilotProjectFolder + "UTF中文文档 - 副本.txt";
+	public static String _PilotProjectFolderTestFile = _PilotProjectFolder + "test.txt";
 }
